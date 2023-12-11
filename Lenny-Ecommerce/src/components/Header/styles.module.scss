@@ -1,0 +1,218 @@
+header{
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 4.2rem;
+    background: linear-gradient(180deg, #F7F7F7 100%, rgba(247, 247, 247, 0.00) 58.1%);
+
+    .container{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 3.9rem;
+    }
+   .buyNow{
+
+        h1{
+            font-family: 'Clash Grotesk';
+            font-size: 3rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 140%; /* 39.2px */
+            letter-spacing: -0.02rem;
+            width: 95%;
+            margin-top: 1rem;
+        }
+
+        .description{
+            color: var(--grey-01, #818B9C);
+            font-family: 'Clash Grotesk';
+            font-size: 1.4rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%; /* 22.4px */
+            margin-top: 2rem;
+        }
+
+        .buttons{
+            margin-top: 3.2rem;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 2rem;
+
+            .btnMain, .btnSecond{
+                width: 100%;
+                // color: black;
+                padding: 1.2rem 3rem;
+                cursor: pointer;
+            }
+        }
+   }
+
+   .productContainer{
+        
+    &:hover{
+        
+        .sliderProduct{
+           visibility: visible;
+        }
+    }
+
+    width: 100%;
+    .productImg{
+        width: 88vw;
+        height: 30rem;
+        img{
+            width: 100%;
+            height: 100%;
+            transform: scale(1.16);
+        }
+    }
+   }
+}
+
+.sliderProduct{
+    position: absolute;
+    visibility: hidden;
+    top: 53rem;
+    left: 9rem;
+    
+}
+
+
+
+
+
+@media screen and (min-width: 602px) {
+
+    header{
+        padding: 0;
+        width: 100%;
+        background: var(--d-grey-03, #F7F7F7);
+        .container{
+            flex-direction: row;
+            width: 100%;
+            height: 100%;
+            margin: 1rem auto;
+            justify-content: space-between;
+            .buyNow{
+                padding-left: 10%;
+                h1{
+                    color: #0B0F0E;
+                    font-family: 'Clash Grotesk';
+                    font-size: 2rem;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 120%;
+                    letter-spacing: -0.2px;
+                    
+                }
+
+                .description{
+                    color: var(--grey-01, #818B9C);
+                    font-family: 'Clash Grotesk';
+                    font-size: 1.2rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 160%; /* 25.6px */
+                }
+
+                .buttons{
+                    flex-direction: row;
+
+                    .btnMain{
+                        // color: var(--white-general, #FFF);
+                        text-align: center;
+                        
+                        font-family: 'Clash Grotesk';
+                        font-size: 1.3rem;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 140%; /* 22.4px */
+                        letter-spacing: -0.2px;
+                        padding: 0.8rem 1.7rem;;
+                    }
+
+                    .btnSecond{
+                        // color: var(--dark-green-01, #1E4C2F);
+                        text-align: center;
+                        font-family: Clash Grotesk;
+                        font-size: 1.3rem;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 140%; /* 22.4px */
+                        letter-spacing: -0.2px;
+                        padding: 0.8rem 1.7rem;
+                    }
+                }
+            }
+
+
+            .productContainer{
+                width: 100%;
+                // height: 46rem;
+               
+    
+                .productImg{
+                    width: 100%;
+                    height: 28rem;
+                    background: url('/src/assets/images/image 4@2x.png'), lightgray 0px 0px / 112.391% 99.955% no-repeat;
+                    background-position: center;
+                     background-size: cover;
+                    
+                    img{
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .sliderProduct{
+            height: 20rem;
+            top: 39%;
+            left: 60%;
+
+        }
+       
+    }
+    
+}
+
+
+
+@media screen and (min-width: 760px){  
+    header{
+        .container{
+            .buyNow{
+                h1{
+                    font-size: 3rem;
+                }
+
+                .description{
+                    font-size: 1.8rem;
+                }
+
+                .buttons{
+
+                    .btnMain, .btnSecond{
+                        font-weight: 600;
+                        width: 37%;
+                    }
+                }
+            }
+
+            .productContainer{
+                .productImg{
+                    height: 41rem;
+                }
+            }
+        }
+
+        .sliderProduct{
+            top: 45%;
+            left: 65%;
+        }
+        
+    }
+}

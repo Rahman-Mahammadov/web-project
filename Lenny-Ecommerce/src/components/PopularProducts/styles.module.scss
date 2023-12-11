@@ -1,0 +1,76 @@
+.container{
+    width: 80%;
+    margin: 10rem auto;
+
+    .heading{
+        color: var(--black-01, #0B0F0E);
+        text-align: center;
+
+        /* Heading/H2 - 18 Semi Bold -  Lh 140% */
+        font-family: 'Clash Grotesk';
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 140%; /* 25.2px */
+        letter-spacing: -0.2px;
+        margin-bottom: 2rem;
+    }
+
+    .description{
+        color: var(--grey-01, #818B9C);
+        
+        /* Paragraph / P2 / 14 Regular - Lh 160% */
+        font-family: 'Clash Grotesk';
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%; /* 22.4px */
+        width:70%;
+        margin: 1.5rem auto;
+        text-align: center;
+    }
+
+
+    .products{
+        display: flex;
+        align-items: start;
+        // justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 4%;
+        
+        
+     
+        
+    }
+    
+   
+
+    .btnContainer{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        margin: 3rem auto;
+        .loadMoreBtn{
+            padding: 1.5rem 3.2rem;
+            cursor: pointer;
+            font-size: 1.4rem;
+            
+        }
+    }
+}
+
+@media screen and (max-width:602px) {
+    .container{
+        width: 90%;
+
+        .products{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+        }
+
+     
+    }
+}

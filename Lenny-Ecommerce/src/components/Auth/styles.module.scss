@@ -1,0 +1,64 @@
+.form {
+  padding: 3.2rem 2.5rem;
+  h1 {
+    color: #0b0f0e;
+
+    /* Extra Heading/Eh5 - 24 Semi Bold -  Lh 140% */
+    font-family: Clash Grotesk;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%; /* 33.6px */
+    letter-spacing: -0.2px;
+    margin-bottom: 3rem;
+  }
+  label {
+    display: block;
+    color: var(--black-01, #0b0f0e);
+    font-family: "Clash Grotesk", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: -0.2px;
+    margin-bottom: 1rem;
+  }
+
+  input {
+    border-radius: 7px;
+    background: var(--d-grey-02, #f6f8fa);
+    height: 4rem;
+    width: 100%;
+    margin-bottom: 1.6rem;
+    padding: 1rem 1.6rem;
+    border-radius: 12px;
+    border: 1px solid  #f6f8fa;
+    outline: none;
+    background: var(--d-grey-02, #f6f8fa);
+
+    font-size: 1.4rem;
+    &::placeholder {
+      color: var(--grey-01, #818b9c);
+
+      /* Paragraph / P2 / 14 Regular - Lh 160% */
+      font-family: Clash Grotesk;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%; /* 22.4px */
+    }
+  }
+  .btn {
+    width: 100%;
+    color: var(--white-general, #fff);
+    text-align: center;
+    padding: 1rem 1.2rem;
+    font-family: 'Clash Grotesk', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%; /* 22.4px */
+    letter-spacing: -0.2px;
+    margin-top: 2rem;
+  }
+}

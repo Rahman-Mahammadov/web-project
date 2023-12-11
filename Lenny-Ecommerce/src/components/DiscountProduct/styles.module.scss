@@ -1,0 +1,103 @@
+.container{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    margin: 10rem auto;
+    background: var(--orange-3, #FCECE1);
+    padding: 8rem 2.5rem;
+    gap: 2.4rem;
+
+    .firstPhoto{
+        width: 17rem;
+        height: 17rem;
+        img{
+            width: 100%;
+            height: 100%;
+        }   
+        }
+
+        .description{
+            .descriptionText{
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+            }
+    }
+
+    .description{
+        padding-left: 1rem;
+        .heading{
+            color: var(--black-01, #0B0F0E);
+            font-family: 'Clash Grotesk';
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 140%; /* 25.2px */
+            letter-spacing: -0.2px;
+        }
+
+        .descriptionText{
+            color: var(--grey-01, #818B9C);
+
+/* Paragraph / P1 / 18 Regular - Lh 160% */
+            font-family: 'Clash Grotesk';
+            font-size: 1.5rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 160%; /* 28.8px */
+        }
+
+        .buttons{
+            display: flex;
+            justify-content: space-between;
+        }
+        .btn{
+            padding: 1.2rem 2rem;
+            width: 43%;
+            cursor: pointer;
+            
+        }
+    }
+    
+}
+
+
+
+// Ipad
+
+@media screen and (min-width:602px) {
+    .container{
+        width: 80%;
+        flex-direction: row;
+        padding: 5rem 2.5rem;
+        .firstPhoto{
+            width: 27rem;
+            height: 24rem;
+        }
+
+        .description{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 55%;
+
+            .descriptionContainer{
+                .heading{
+                    font-size: 3.1rem;
+                }
+
+                .descriptionText{
+                    font-size: 1.5rem;
+                }
+
+               .buttons{
+                justify-content: start;
+                gap: 2rem;
+                .btn{
+                    width: 40%;
+                }
+               }
+            }
+        }
+    }
+}

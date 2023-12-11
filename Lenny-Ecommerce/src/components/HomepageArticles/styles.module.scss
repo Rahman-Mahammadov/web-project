@@ -1,0 +1,25 @@
+.articles{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+}
+
+
+@media screen and (min-width:510px) {
+    .articles{
+        width: 90%;
+        margin: 6rem auto;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width:560px) {
+    .articles{
+        width: 80%;
+        margin: 6rem auto;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

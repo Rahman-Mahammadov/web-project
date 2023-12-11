@@ -1,0 +1,527 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.heading {
+  height: 230px;
+  background-color: #f7f7f7;
+
+  padding-top: 5rem;
+  .intro {
+    width: 90%;
+    margin: 0 auto;
+    .cart {
+      color: var(--black-01, #0b0f0e);
+      font-feature-settings: "clig" off, "liga" off;
+      font-family: Clash Grotesk;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 140%; /* 28px */
+      letter-spacing: -0.2px;
+    }
+
+    .results {
+      color: var(--grey-01, #818b9c);
+      font-feature-settings: "clig" off, "liga" off;
+      font-family: Clash Grotesk;
+      font-size: 1.4rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%; /* 22.4px */
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+.productsSection {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: -7rem;
+  .allProductsContainer {
+    .merchantContainer {
+      border-radius: 12px;
+      border: 1px solid var(--d-grey-01, #e4e9ee);
+      background: var(--white-general, #fff);
+      padding: 1.6rem;
+      margin-bottom: 3rem;
+      .logoSection {
+        display: flex;
+        .logoContainer {
+          width: 4.6rem;
+          height: 4.6rem;
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 44px;
+            border: 1px solid var(--l-grey-01, #f1f1f1);
+            box-shadow: 0px 4px 10px 0px rgba(129, 139, 156, 0.07);
+          }
+        }
+
+        .brandInfo {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          margin-left: 1.2rem;
+
+          h2 {
+            color: var(--black-01, #0b0f0e);
+
+            /* Heading/H3 - 14 Semi Bold -  Lh 140% */
+            font-family: "Clash Grotesk";
+            font-size: 1.4rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 140%; /* 19.6px */
+            letter-spacing: -0.2px;
+          }
+
+          p {
+            color: var(--grey-01, #818b9c);
+
+            /* Paragraph/P3/12 Regular - Lh 160% */
+            font-family: "Clash Grotesk";
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 160%;
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      .singleProduct {
+        display: flex;
+        flex-direction: column;
+        hr {
+          margin-top: 2rem;
+        }
+        .productDetails {
+          display: flex;
+          gap: 1rem;
+          margin-top: 2.4rem;
+          .productImg {
+            width: 7rem;
+            height: auto;
+            margin-left: 1.1rem;
+            img {
+              height: 100%;
+              width: 100%;
+            }
+          }
+
+          .productInfo {
+            .productName {
+              color: var(--black-01, #0b0f0e);
+
+              /* Heading/H4 - 12 Semi Bold -  Lh 140% */
+              font-family: "Clash Grotesk";
+              font-size: 1.2rem;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 140%; /* 16.8px */
+              letter-spacing: -0.2px;
+            }
+            .merchantName {
+              color: var(--grey-01, #818b9c);
+
+              /* Paragraph/P4/10 Regular - Lh 160% */
+              font-family: "Clash Grotesk";
+              font-size: 1rem;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 160%; /* 16px */
+            }
+
+            .price {
+              color: var(--dark-green-03, #1d9e34);
+
+              /* Heading/H4 - 12 Semi Bold -  Lh 140% */
+              font-family: "Clash Grotesk";
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 140%; /* 16.8px */
+              letter-spacing: -0.2px;
+            }
+          }
+        }
+
+        .buttons {
+          display: flex;
+          gap: 2rem;
+          align-self: flex-end;
+          .quantity {
+            border-radius: 8px;
+            border: 1px solid var(--d-grey-01, #e4e9ee);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            width: 70px;
+
+            justify-content: space-between;
+            padding: 0.2rem 0.6rem;
+            p {
+              color: var(--black-01, #0b0f0e);
+              text-align: center;
+
+              /* Paragraph/P2/14 Medium - Lh 160% */
+              font-family: Clash Grotesk;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 160%;
+              margin-bottom: 0;
+            }
+          }
+
+          span {
+            cursor: pointer;
+            &:hover {
+              transform: scale(1.3);
+            }
+          }
+          .delete {
+            border-radius: 8px;
+            border: 1px solid var(--d-grey-01, #e4e9ee);
+            width: 3.4rem;
+            display: flex;
+            justify-content: center;
+            padding: 0.2px 12px;
+            cursor: pointer;
+            &:hover {
+              transform: scale(1.01);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .productsSummaryContainer {
+    border-radius: 12px;
+    border: 1px solid var(--d-grey-01, #e4e9ee);
+    background: var(--white-general, #fff);
+    width: 100%;
+    margin: 2rem auto;
+    padding: 2.4rem;
+
+    .productSummary {
+      color: var(--black-01, #0b0f0e);
+
+      font-family: "Clash Grotesk";
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 140%; /* 22.4px */
+      letter-spacing: -0.2px;
+    }
+
+    .totalPriceContainer {
+      display: flex;
+      justify-content: space-between;
+      margin: 1.2rem 0;
+      .totalPrice,
+      .priceAmount {
+        color: var(--grey-01, #818b9c);
+        font-family: "Clash Grotesk";
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+      }
+    }
+
+    .deliveryContainer {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1.2rem;
+
+      .deliveryAmount,
+      .deliveryPrice {
+        color: var(--grey-01, #818b9c);
+        font-family: "Clash Grotesk";
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+      }
+    }
+
+    .deliveryMessage {
+      color: var(--grey-01, #818b9c);
+      font-family: "Clash Grotesk";
+      font-size: 1.4rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%;
+    }
+
+    .finalPriceContainer {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1.2rem;
+      p {
+        color: var(--black-01, #0b0f0e);
+        text-align: right;
+
+        /* Heading / Eh - 16 Semi Bold -  Lh 140% */
+        font-family: Clash Grotesk;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 140%; /* 22.4px */
+        letter-spacing: -0.2px;
+      }
+    }
+
+    .promoCode {
+      border-radius: 12px;
+      border: 1px solid var(--d-grey-01, #e4e9ee);
+      background: var(--white-general, #fff);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 1rem 0;
+      cursor: pointer;
+
+      .promoImg {
+        width: 2rem;
+        height: 2rem;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .promoText {
+        h1 {
+          color: var(--black-01, #0b0f0e);
+
+          /* Heading/H3 - 14 Semi Bold -  Lh 140% */
+          font-family: "Clash Grotesk";
+          font-size: 1.6rem;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 140%; /* 19.6px */
+          letter-spacing: -0.2px;
+        }
+
+        p {
+          color: var(--grey-01, #818b9c);
+
+          /* Paragraph/P3/12 Regular - Lh 160% */
+          font-family: "Clash Grotesk";
+          font-size: 1.4rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 160%;
+          margin-bottom: 0;
+        }
+      }
+
+      .nextIcon {
+        width: 1.7rem;
+        height: 1.7rem;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    .enterPromoCode {
+      border-radius: 12px;
+      border: 1px solid var(--d-grey-01, #e4e9ee);
+      background: var(--white-general, #fff);
+      display: flex;
+      width: 100%;
+      margin-bottom: 2rem;
+
+      input {
+        width: 70%;
+        border-radius: 12px 0 0 12px;
+        border: none;
+        padding: 1rem;
+      }
+
+      .promoBtn {
+        height: 3.4rem;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        width: 30%;
+      }
+    }
+
+    .checkoutBtn {
+      width: 100%;
+      border-radius: 8px;
+      background: var(--dark-green-01, #1e4c2f);
+      padding: 1.4rem 1rem;
+      margin-top: 2.5rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 620px) {
+  .heading {
+    .intro {
+      width: 80%;
+    }
+  }
+  .productsSection {
+    width: 80%;
+    flex-direction: row;
+    gap: 3rem;
+    .allProductsContainer {
+      width: 75%;
+      flex: 1;
+
+      .merchantContainer {
+        .logoSection {
+          margin-bottom: 2rem;
+          .logoContainer {
+            width: 7rem;
+            height: 7rem;
+          }
+
+          .brandInfo {
+            h2 {
+              font-size: 1.6rem;
+            }
+            p {
+              font-size: 1.4rem;
+            }
+          }
+        }
+
+        .singleProduct {
+          .productDetails {
+            .productImg {
+              width: 8rem;
+            }
+
+            .productInfo {
+              .productName {
+                font-size: 1.6rem;
+              }
+              .merchantName {
+                font-size: 1.4rem;
+              }
+              .price {
+                font-size: 1.6rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .productsSummaryContainer {
+      width: 34%;
+      margin-top: 0;
+      padding: 0.7rem;
+      height: fit-content;
+      .promoCode {
+        gap: 2px;
+        padding: 0.3rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  .productsSection {
+    .allProductsContainer {
+      .merchantContainer {
+        .logoSection {
+          .logoContainer {
+            width: 9rem;
+            height: 9rem;
+          }
+
+          .brandInfo {
+            h2 {
+              font-size: 1.75rem;
+            }
+            p {
+              font-size: 1.6rem;
+            }
+          }
+        }
+
+        .singleProduct {
+          .productDetails {
+            .productImg {
+              width: 10rem;
+            }
+
+            .productInfo {
+              .productName {
+                font-size: 2rem;
+              }
+
+              .merchantName {
+                font-size: 1.7rem;
+              }
+
+              .price {
+                font-size: 2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .productsSummaryContainer {
+      padding: 1.6rem;
+      .productSummary {
+        font-size: 2rem;
+      }
+
+      .totalPriceContainer {
+        .totalPrice,
+        .priceAmount {
+          font-size: 1.7rem;
+        }
+      }
+
+      .deliveryContainer {
+        .deliveryPrice,
+        .deliveryAmount {
+          font-size: 1.7rem;
+        }
+      }
+      .deliveryMessage {
+        font-size: 1.6rem;
+      }
+
+      .finalPriceContainer {
+        .finalPrice,
+        .finalAmount {
+          font-size: 2rem;
+        }
+      }
+
+      .promoCode{
+        .promoImg{
+            width: 2.6rem;
+            height: 2.6rem;
+        }
+        .promoText{
+            h1{
+                font-size: 1.6rem;
+            }
+            p{
+              font-size: 1.4rem;
+            }
+        }
+      }
+    }
+  }
+}
