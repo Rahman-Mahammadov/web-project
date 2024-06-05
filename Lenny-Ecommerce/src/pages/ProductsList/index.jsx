@@ -75,16 +75,14 @@ export const ProductsList = () => {
     }
 
     getInitialProducts();
-  }, [input, cat]);
+  }, []);
 
   React.useEffect(() => {
     async function changeUrl() {
       const {
         data: { data },
       } = await instance.get(url);
-      console.log(data);
       setProducts(data);
-      console.log(url);
     }
     changeUrl();
   }, [url]);
@@ -97,46 +95,54 @@ export const ProductsList = () => {
   };
 
   const handleSorting = (e) => {
-    const {value} = e.target
-    console.log(value);
+    const { value } = e.target;
 
     if (url.includes("&sort=")) {
       // Replace the existing sort value with the new one
-      setUrl(url.replace(/&sort=[^&]*/, `&sort=${value}`))
-  } else {
-      
-      setUrl(url + `&sort=${value}`)
-  }
-   
+      setUrl(url.replace(/&sort=[^&]*/, `&sort=${value}`));
+    } else {
+      setUrl(url + `&sort=${value}`);
+    }
   };
-  console.log(url)
+
   const handlePriceChange = (e) => {
     const { name, value } = e.target;
-    console.log(name, value);
+
     setPriceFilter((prev) => ({
       ...prev,
       [name]: value,
     }));
   };
 
+  const navigate = useNavigate();
+
   return (
     <>
       <div className={styles.nav}>
-        <p>Home</p>
+        <p style={{ cursor: "pointer" }} onClick={() => navigate("/")}>
+          Home
+        </p>
         <span className="material-symbols-outlined">chevron_right</span>
-        <p>Electronics</p>
-        <span className="material-symbols-outlined">chevron_right</span>
-        <h4>Gaming gear</h4>
+        {categoryUrl ? (
+          <p
+            onClick={() => {
+              navigate(`/productslist/${categoryUrl}`);
+            }}
+          >
+            {categoryUrl}
+          </p>
+        ) : (
+          <h4>{inputUrl}</h4>
+        )}
       </div>
       <section className={styles.productsList}>
         <div className={styles.showResults}>
           <div className={styles.heading}>
             {inputUrl ? <h1>Showing product for “{inputUrl}”</h1> : ""}
-            <p>Showing 1 - 60 Products</p>
+            <p>Showing {products.length} Products</p>
           </div>
           <div className={styles.sorting}>
             <form id="sorting">
-              <label htmlFor="sort">Choose a car:</label>
               <select
                 onChange={handleSorting}
                 id="sort"
@@ -144,15 +150,9 @@ export const ProductsList = () => {
                 form="sorting"
               >
                 <option value="Sort by">Sort by</option>
-                <option value="price:asc">
-                  Price(least to the highest)
-                </option>
-                <option value="price:desc">
-                  Price(highest to the least)
-                </option>
-                <option value="rating:asc">
-                  Review(least to the highest)
-                </option>
+                <option value="price:asc">Price(least to the highest)</option>
+                <option value="price:desc">Price(highest to the least)</option>
+                <option value="rating:asc">Review(least to the highest)</option>
                 <option value="rating:desc">
                   Review(highest to the least)
                 </option>
@@ -183,7 +183,7 @@ export const ProductsList = () => {
                 data-name="best"
                 className="material-symbols-outlined"
               >
-                expand_less
+                {!open.best ? "expand_less" : "expand_more"}
               </span>
             </div>
 
@@ -227,7 +227,7 @@ export const ProductsList = () => {
                 data-name="category"
                 onClick={(e) => handleAccordion(e)}
               >
-                expand_less
+                {!open.category ? "expand_less" : "expand_more"}
               </span>
             </div>
 
@@ -296,7 +296,7 @@ export const ProductsList = () => {
                 data-name="price"
                 onClick={(e) => handleAccordion(e)}
               >
-                expand_less
+                {!open.price ? "expand_less" : "expand_more"}
               </span>
             </div>
 

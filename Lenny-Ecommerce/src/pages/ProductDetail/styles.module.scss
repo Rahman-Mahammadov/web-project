@@ -5,7 +5,7 @@
   p,
   h4 {
     color: var(--dark-green-03, #1d9e34);
-    font-family: "Clash Grotesk";
+    font-family: 'Clahs Grotesk';
     font-size: 1.6rem;
     font-style: normal;
     font-weight: 500;
@@ -36,18 +36,18 @@
       width: 100%;
       height: 41rem;
       border-radius: 9px;
-      background: var(--l-grey-02, #F6F6F6);
+      background: var(--l-grey-02, #f6f6f6);
+      border: solid 1px #e6e6e6;
+      border-radius: 8px 8px 8px 8px;
 
-
-
-      & > div{
+      & > div {
         height: 100% !important;
 
         & > img {
           width: 100%;
           height: 100% !important;
-          border-radius:8px;
-        //   object-fit: cover;
+          border-radius: 8px;
+          //   object-fit: cover;
         }
 
         // &> div {
@@ -56,7 +56,6 @@
         //     left: 110% !important;
         // }
       }
-
     }
 
     .otherImages {
@@ -69,10 +68,14 @@
       div {
         width: 25%;
         height: 7rem;
-        
+        border: solid 1px #e6e6e6;
+        border-radius: 8px 8px 8px 8px;
+
         img {
           width: 100%;
           height: 100%;
+          border: solid 0.5px #e6e6e6;
+          border-radius: 8px 8px 8px 8px;
         }
       }
     }
@@ -93,164 +96,156 @@
       letter-spacing: -0.2px;
     }
 
-    .rating{
+    .rating {
+      display: flex;
+      gap: 2rem;
+      .star {
         display: flex;
-        gap: 2rem;
-        .star{
-            display: flex;
-            gap: 1rem;
-            img{
-                width: 2rem;
-                height: 2rem;
-            }
-            p{
-                color: var(--black-01, #0B0F0E);
-
-                /* Paragraph / P2 / 14 Regular - Lh 160% */
-                font-family: 'Clash Grotesk';
-                font-size: 1.4rem;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 160%; /* 22.4px */
-            }
+        gap: 1rem;
+        img {
+          width: 2rem;
+          height: 2rem;
         }
+        p {
+          color: var(--black-01, #0b0f0e);
 
-        .soldQuantity{
-            color: var(--black-01, #0B0F0E);
-
-            /* Paragraph / P2 / 14 Regular - Lh 160% */
-            font-family: 'Clash Grotesk';
-            font-size: 1.4rem;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 160%; /* 22.4px */
+          /* Paragraph / P2 / 14 Regular - Lh 160% */
+          font-family: 'Clash Grotesk';
+          font-size: 1.4rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 160%; /* 22.4px */
         }
-    }
+      }
 
-    .price{
-        color: var(--dark-green-03, #1D9E34);
+      .soldQuantity {
+        color: var(--black-01, #0b0f0e);
 
-        /* Extra Heading/Eh6 - 20 Semi Bold -  Lh 130% */
-        font-family: 'Clash Grotesk';
-        font-size: 2rem;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 140%; /* 28px */
-        letter-spacing: -0.2px;
-        margin-top: 1.3rem;
-        display: block;
-    }
-
-    .shortDescription{
-        color: var(--grey-01, #818B9C);
-
-        margin-top: 1.3rem;
+        /* Paragraph / P2 / 14 Regular - Lh 160% */
         font-family: 'Clash Grotesk';
         font-size: 1.4rem;
         font-style: normal;
         font-weight: 400;
         line-height: 160%; /* 22.4px */
+      }
     }
 
-    .variants{
-       
-        display: flex;
-        justify-content: space-between;
-        margin-top: 1.6rem;
-        label{
-            color: var(--black-01, #0B0F0E);
+    .price {
+      color: var(--dark-green-03, #1d9e34);
 
-            /* Paragraph / P2 / 14 Regular - Lh 160% */
-            font-family: 'Clash Grotesk';
-            font-size: 1.4rem;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 160%; /* 22.4px */
-        }
-
-        select{
-            display: flex;
-            padding: 11px 16px;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-            gap: 10px;
-            border-radius: 8px;
-            border: 1px solid var(--d-grey-01, #E4E9EE);
-            
-        }
-
-        
+      /* Extra Heading/Eh6 - 20 Semi Bold -  Lh 130% */
+      font-family: 'Clash Grotesk';
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 140%; /* 28px */
+      letter-spacing: -0.2px;
+      margin-top: 1.3rem;
+      display: block;
     }
 
-    .buttons{
+    .shortDescription {
+      color: var(--grey-01, #818b9c);
+
+      margin-top: 1.3rem;
+      font-family: 'Clash Grotesk';
+      font-size: 1.4rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%; /* 22.4px */
+    }
+
+    .variants {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1.6rem;
+      label {
+        color: var(--black-01, #0b0f0e);
+
+        /* Paragraph / P2 / 14 Regular - Lh 160% */
+        font-family: 'Clash Grotesk';
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%; /* 22.4px */
+      }
+
+      select {
         display: flex;
-        margin-top: 3rem;
+        padding: 11px 16px;
         flex-direction: column;
-        gap: 1rem;
-        width: 100%;
-        .btn{
-            padding: 14px 10px;
-        }
+        justify-content: center;
+        align-items: flex-start;
+        gap: 10px;
+        border-radius: 8px;
+        border: 1px solid var(--d-grey-01, #e4e9ee);
+      }
+    }
+
+    .buttons {
+      display: flex;
+      margin-top: 3rem;
+      flex-direction: column;
+      gap: 1rem;
+      width: 100%;
+      .btn {
+        padding: 14px 10px;
+      }
     }
   }
 }
 
-.detailsNavigation{
+.detailsNavigation {
   width: 90%;
   margin: 5.5rem auto;
 
-  ul{
+  ul {
     display: flex;
     gap: 3rem;
     // overflow-x: scroll;
     white-space: nowrap;
 
-
-    li{
+    li {
       list-style: none;
       display: inline;
-      
+
       cursor: pointer;
-        text-decoration: none;
-        color: var(--dark-green-01, #818B9C);
-        text-align: center;
-        
-       
-        font-family: 'Clash Grotesk';
-        font-size: 1.4rem;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 140%; /* 22.4px */
-        letter-spacing: -0.02rem;
+      text-decoration: none;
+      color: var(--dark-green-01, #818b9c);
+      text-align: center;
 
-        &::after{
-          content: '';
-          display: block;
-          width: 0;
-          height: 1px;
-          background: #1E4C2F;
-          transition: width .4s ease-in;
-        }
+      font-family: 'Clash Grotesk';
+      font-size: 1.4rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 140%; /* 22.4px */
+      letter-spacing: -0.02rem;
 
-        &:hover{
-          color:#1E4C2F;
-        }
+      &::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 1px;
+        background: #1e4c2f;
+        transition: width 0.4s ease-in;
+      }
 
-        &:hover::after{
-          width: 100%;
-        }
-      
+      &:hover {
+        color: #1e4c2f;
+      }
 
+      &:hover::after {
+        width: 100%;
+      }
     }
   }
 }
 
-.shortDesc{
+.shortDesc {
   width: 90%;
   margin: 3.5rem auto;
-  h1{
-    color: var(--black-01, #0B0F0E);
+  h1 {
+    color: var(--black-01, #0b0f0e);
 
     /* Extra Heading/Eh4 - 28 Semi Bold -  Lh 140% */
     font-family: 'Clash Grotesk';
@@ -261,10 +256,10 @@
     letter-spacing: -0.2px;
   }
 
-  p{
+  p {
     margin-top: 1.2rem;
     // width: 80%;
-    color: var(--grey-01, #818B9C);
+    color: var(--grey-01, #818b9c);
 
     /* Paragraph/P1/16 Regular - Lh 160% */
     font-family: 'Clash Grotesk';
@@ -275,45 +270,45 @@
   }
 }
 
-.specificationsContainer{
+.specificationsContainer {
   width: 90%;
   margin: 0 auto;
-  h1{
-    color: var(--black-01, #0B0F0E);
+  h1 {
+    color: var(--black-01, #0b0f0e);
 
-    margin:2.5rem 0;
-    font-family:'Clash Grotesk';
+    margin: 2.5rem 0;
+    font-family: 'Clash Grotesk';
     font-size: 1.6rem;
     font-style: normal;
     font-weight: 600;
     line-height: 140%; /* 22.4px */
     letter-spacing: -0.2px;
   }
-  .specification1{
+  .specification1 {
     width: 100%;
-    ul{
+    ul {
       display: flex;
       flex-direction: column;
       gap: 1rem;
       li {
         display: flex;
         justify-content: space-between;
-        div{
+        div {
           width: 50%;
         }
-        h3{
+        h3 {
           list-style: none;
-          color: var(--grey-01, #818B9C);
-  
+          color: var(--grey-01, #818b9c);
+
           /* Paragraph / P2 / 14 Regular - Lh 160% */
-          font-family: Clash Grotesk;
+          font-family: 'Clash Grotesk';
           font-size: 1.4rem;
           font-style: normal;
           font-weight: 400;
           line-height: 160%; /* 22.4px */
         }
-        p{
-          color: var(--black-01, #0B0F0E);
+        p {
+          color: var(--black-01, #0b0f0e);
           text-align: left;
 
           /* Paragraph/P2/14 Medium - Lh 160% */
@@ -326,33 +321,34 @@
         }
       }
 
-     li:nth-child(odd){
-      background-color:#F9F9F9;
-     }
-
-      
+      li:nth-child(odd) {
+        background-color: #f9f9f9;
+      }
     }
   }
 
-  .specification2{
+  .specification2 {
     width: 100%;
-    ul{
+    ul {
       display: flex;
       flex-direction: column;
       gap: 1rem;
-      li{
+      li {
         list-style: none;
-        div{
+        div {
           display: flex;
-          align-items:center;
-          .icon{
+          align-items: center;
+          .icon {
             width: 2.4rem !important;
             height: 2.4rem;
             margin-right: 1.6rem;
-            img{
+            img {
               width: 2.4rem;
               height: 2.4rem;
             }
+          }
+          p{
+            margin-bottom: 0;
           }
         }
       }
@@ -360,19 +356,19 @@
   }
 }
 
-.hr{
+.hr {
   width: 90%;
   margin: 4rem auto;
-  color: #E4E9EE;
+  color: #e4e9ee;
   // height: 1px;
   border: 1px solid;
 }
 
-.merchantContainer{
+.merchantContainer {
   width: 90%;
   margin: 2rem auto;
-  h1{
-    color: var(--black-01, #0B0F0E);
+  h1 {
+    color: var(--black-01, #0b0f0e);
 
     /* Heading / Eh - 16 Semi Bold -  Lh 140% */
     font-family: 'Clash Grotesk';
@@ -384,30 +380,30 @@
     margin-bottom: 1.5rem;
   }
 
-  .container{
+  .container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 2rem;
     margin: 4rem 0;
-    .logoSection{
+    .logoSection {
       display: flex;
       gap: 1.4rem;
-      .logoContainer{
+      .logoContainer {
         width: 5.2rem;
         height: 5.2rem;
-        img{
+        img {
           width: 100%;
           height: 100%;
           border-radius: 53%;
-          border: 2px solid var(--l-grey-01, #F1F1F1);  
+          border: 2px solid var(--l-grey-01, #f1f1f1);
           box-shadow: 0px 4px 60px 0px rgba(129, 139, 156, 0.12);
         }
       }
 
-      .merchantInfo{
-        h2{
-          color: var(--black-01, #0B0F0E);
+      .merchantInfo {
+        h2 {
+          color: var(--black-01, #0b0f0e);
 
           /* Heading/H3 - 14 Semi Bold -  Lh 140% */
           font-family: 'Clash Grotesk';
@@ -418,8 +414,8 @@
           letter-spacing: -0.2px;
         }
 
-        h3{
-          color: var(--grey-01, #818B9C);
+        h3 {
+          color: var(--grey-01, #818b9c);
 
           /* Paragraph/P3/12 Regular - Lh 160% */
           font-family: 'Clash Grotesk';
@@ -429,24 +425,24 @@
           line-height: 160%; /* 19.2px */
         }
 
-        .merchantRating{
+        .merchantRating {
           display: flex;
           gap: 1rem;
           margin-top: 1rem;
 
-          div{
+          div {
             padding: 0.5rem 0.8rem;
             border-radius: 4px;
-            background: rgba(29, 158, 52, 0.10);
-            p{
-              color: var(--dark-green-03, #1D9E34);
+            background: rgba(29, 158, 52, 0.1);
+            p {
+              color: var(--dark-green-03, #1d9e34);
 
-              /* Paragraph / P3 / 12 Medium - Lh 160% */
+              margin-bottom: 0;
               font-family: Clash Grotesk;
               font-size: 12px;
               font-style: normal;
               font-weight: 500;
-              line-height: 160%; /* 19.2px */ 
+              line-height: 160%; /* 19.2px */
             }
           }
         }
@@ -454,35 +450,35 @@
     }
   }
 
-  .merchantButtons{
+  .merchantButtons {
     display: flex;
     justify-content: space-between;
-    align-items:center;
-    
+    align-items: center;
 
-    .chatMerchant{
+    .chatMerchant {
       display: flex;
       height: 40%;
-      align-items:center;
+      align-items: center;
       gap: 0.5rem;
       border-radius: 8px;
-      border: 1px solid var(--dark-green-01, #1E4C2F);
+      border: 1px solid var(--dark-green-01, #1e4c2f);
       padding: 1rem 2.8rem;
-      .chatlogo{
+      .chatlogo {
         width: 2.5rem;
         height: 2.5rem;
-        img{
+        img {
           width: 100%;
           height: 100%;
         }
       }
 
-      p{
-        color: var(--dark-green-01, #1E4C2F);
+      p {
+        color: var(--dark-green-01, #1e4c2f);
         text-align: center;
-        
+        margin-bottom: 0;
+
         /* Heading/H3 - 14 Semi Bold -  Lh 140% */
-        font-family: 'Clash Grotesk';
+        font-family: 'Clahs Grotesk';
         font-size: 1.4rem;
         font-style: normal;
         font-weight: 600;
@@ -491,29 +487,30 @@
       }
     }
 
-    .visitMerchant{
+    .visitMerchant {
       display: flex;
       height: 40%;
-      align-items:center;
+      align-items: center;
       gap: 0.5rem;
       border-radius: 8px;
-      border: 1px solid var(--dark-green-01, #1E4C2F);
+      border: 1px solid var(--dark-green-01, #1e4c2f);
       padding: 1rem 2.8rem;
-      .visitlogo{
+      .visitlogo {
         width: 2.5rem;
         height: 2.5rem;
-        img{
+        img {
           width: 100%;
           height: 100%;
         }
       }
 
-      p{
-        color: var(--dark-green-01, #1E4C2F);
+      p {
+        color: var(--dark-green-01, #1e4c2f);
         text-align: center;
-        
+        margin-bottom: 0;
+
         /* Heading/H3 - 14 Semi Bold -  Lh 140% */
-        font-family: 'Clash Grotesk';
+        font-family: 'Clahs Grotesk';
         font-size: 1.4rem;
         font-style: normal;
         font-weight: 600;
@@ -524,85 +521,80 @@
   }
 }
 
-.reviewsContainer{
+.reviewsContainer {
   width: 90%;
   margin: 1rem auto;
   display: flex;
   flex-direction: column;
-  .filterSection{
-    aside{
-      
+  .filterSection {
+    aside {
       padding: 1.4rem;
       border-radius: 1.2rem;
-      border: 1px solid var(--d-grey-01, #E4E9EE);
-      h1{
-        color: var(--black-01, #0B0F0E);
-        font-family: 'Clash Grotesk';
+      border: 1px solid var(--d-grey-01, #e4e9ee);
+      h1 {
+        color: var(--black-01, #0b0f0e);
+        font-family: 'Clahs Grotesk';
         font-size: 1.6rem;
         font-style: normal;
         font-weight: 600;
-        line-height: 140%; 
-        letter-spacing: -0.2px;      
+        line-height: 140%;
+        letter-spacing: -0.2px;
       }
-  
-      .modalClose span{
+
+      .modalClose span {
         display: none;
       }
-      hr{
-        border-color: #E4E9EE;
+      hr {
+        border-color: #e4e9ee;
         height: 1px;
         margin-bottom: 1rem;
       }
-      .mainFilter{
+      .mainFilter {
         font-size: 2rem;
         margin-bottom: 1rem;
       }
-      ul{
+      ul {
         max-height: 150px;
         transition: all 1s ease;
         overflow: hidden;
-  
       }
-      ul li{
+      ul li {
         list-style: none;
         display: flex;
-        align-items:center;
+        align-items: center;
         gap: 1rem;
-        label{
-          color: var(--grey-01, #818B9C);
-  
+        label {
+          color: var(--grey-01, #818b9c);
+
           display: flex;
-          align-items:center;
+          align-items: center;
           gap: 0.8rem;
-          font-family: 'Clash Grotesk';
+          font-family: 'Clahs Grotesk';
           font-size: 1.6rem;
           font-style: normal;
           font-weight: 400;
           line-height: 160%; /* 25.6px */
-          img{
+          img {
             width: 2rem;
             height: 2rem;
           }
         }
-  
-        input{
-          accent-color: #1D9E34;
+
+        input {
+          accent-color: #1d9e34;
         }
       }
-  
-     
-      
-  
-      .filterHeading{
+
+      .filterHeading {
         display: flex;
         justify-content: space-between;
         margin: 1rem 0;
-        span{
+        span {
           cursor: pointer;
         }
       }
-  
-      .prices{
+
+      .prices {
         max-height: 350px;
         transition: all 1s;
         overflow: hidden;
@@ -612,26 +604,26 @@
           font-size: 1.5rem;
           margin-bottom: 1rem;
           border-radius: 12px;
-          border: 1px solid var(--d-grey-01, #E4E9EE);
+          border: 1px solid var(--d-grey-01, #e4e9ee);
         }
-        .btn{
+        .btn {
           width: 40%;
           padding: 0.4rem 0.8rem;
-          font-size:1.1rem;
+          font-size: 1.1rem;
           margin-bottom: 1.3rem;
         }
-  
-        .priceSingle{
+
+        .priceSingle {
           border-radius: 12px;
-          border: 1px solid var(--d-grey-01, #E4E9EE);
-          
+          border: 1px solid var(--d-grey-01, #e4e9ee);
+
           margin-bottom: 1.2rem;
           padding: 1rem 1.6rem;
-          p{
-            color: var(--black-01, #0B0F0E);
-  
+          p {
+            color: var(--black-01, #0b0f0e);
+
             /* Paragraph / P2 / 14 Regular - Lh 160% */
-            font-family: 'Clash Grotesk';
+            font-family: 'Clahs Grotesk';
             font-size: 14px;
             font-style: normal;
             font-weight: 400;
@@ -639,18 +631,18 @@
           }
         }
       }
-  
-      .closeFilter{
-      overflow: hidden;
-      max-height: 0;
-      transition: all 0.5s ease-in-out;
+
+      .closeFilter {
+        overflow: hidden;
+        max-height: 0;
+        transition: all 0.5s ease-in-out;
       }
     }
   }
 
-  .reviewsSection{
-    h1{
-      color: var(--black-01, #0B0F0E);
+  .reviewsSection {
+    h1 {
+      color: var(--black-01, #0b0f0e);
 
       /* Heading / Eh - 16 Semi Bold -  Lh 140% */
       font-family: Clash Grotesk;
@@ -662,18 +654,16 @@
       margin-bottom: 2rem;
     }
 
-    .reviewsWrapper{
-
-      .singleReview{
-        .hr1{
+    .reviewsWrapper {
+      .singleReview {
+        .hr1 {
           width: 100%;
         }
-        .reviewRating ul{
-        
+        .reviewRating ul {
           display: flex;
-          li{
+          li {
             list-style: none;
-            img{
+            img {
               width: 2rem;
               height: 2rem;
             }
@@ -681,9 +671,9 @@
           margin-bottom: 2rem;
         }
 
-        .reviewText{
-          color: var(--black-01, #0B0F0E);
-          font-family: 'Clash Grotesk';
+        .reviewText {
+          color: var(--black-01, #0b0f0e);
+          font-family: 'Clahs Grotesk';
           font-size: 1.4rem;
           font-style: normal;
           font-weight: 600;
@@ -691,35 +681,35 @@
           letter-spacing: -0.2px;
         }
 
-        .reviewDate{
-          color: var(--grey-01, #818B9C);
+        .reviewDate {
+          color: var(--grey-01, #818b9c);
 
           margin-bottom: 2rem;
-          font-family: 'Clash Grotesk';
+          font-family: 'Clahs Grotesk';
           font-size: 14px;
           font-style: normal;
           font-weight: 400;
           line-height: 160%; /* 22.4px */
         }
 
-        .reviewUser{
+        .reviewUser {
           display: flex;
-          align-items:center;
+          align-items: center;
           gap: 1rem;
-          .userPhoto{
+          .userPhoto {
             width: 3rem;
             height: 3rem;
-            img{
+            img {
               height: 100%;
               width: 100%;
             }
           }
 
-          h2{
-            color: var(--black-01, #0B0F0E);
+          h2 {
+            color: var(--black-01, #0b0f0e);
 
             /* Paragraph/P2/14 Medium - Lh 160% */
-            font-family:' Clash Grotesk';
+            font-family: " Clash Grotesk";
             font-size: 14px;
             font-style: normal;
             font-weight: 500;
@@ -731,10 +721,9 @@
   }
 }
 
-
-
-
-
+ul {
+  padding-left: 0 !important;
+}
 
 @media screen and (min-width: 560px) {
   .nav {
@@ -751,199 +740,194 @@
     margin: 2.5rem auto;
     gap: 3.5rem;
 
-    .imagesContainer{
+    .imagesContainer {
+      margin: 0;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .thumbnail {
+        height: 36rem;
+      }
+
+      .otherImages {
         margin: 0;
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        gap: 10%;
 
-        .thumbnail{
-            height: 36rem;
+        div {
+          width: 25%;
+          height: 5.4rem;
         }
-
-        .otherImages{
-          margin: 0;
-          gap: 10%;
-        
-            div{
-                width: 25%;
-                height: 5.4rem;
-            }
-        }
-
-        
+      }
     }
 
-    .productDetails{
-        width: 50%;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        // justify-content: space-between;
-        h1{
-            font-size: 2.4rem;
-        }
+    .productDetails {
+      width: 50%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      // justify-content: space-between;
+      h1 {
+        font-size: 2.4rem;
+      }
 
-        .rating{
-            .star{
-                img{
-                    width: 2.4rem;
-                    height: 2.4rem;
-                }   
-            }
-        }
-
-        .variants{
-            justify-content: flex-start;
-            gap: 2rem;
-            margin-top: 3rem;
-            select{
-              font-size: 1.2rem;
-              option{
-                font-size: 1.5rem;
-              }
-            }
-
-            div{
-              label{
-                margin-bottom: 2rem;
-              }
-            }
-            
-        }
-
-        .buttons{
-          flex-direction: row;
-          .btn{
-            padding: 0.8rem 4rem;
+      .rating {
+        .star {
+          img {
+            width: 2.4rem;
+            height: 2.4rem;
           }
         }
+      }
+
+      .variants {
+        justify-content: flex-start;
+        gap: 2rem;
+        margin-top: 3rem;
+        select {
+          font-size: 1.2rem;
+          option {
+            font-size: 1.5rem;
+          }
+        }
+
+        div {
+          label {
+            margin-bottom: 2rem;
+          }
+        }
+      }
+
+      .buttons {
+        flex-direction: row;
+        .btn {
+          padding: 0.8rem 4rem;
+        }
+      }
     }
   }
 
-
-  .shortDesc{
+  .shortDesc {
     width: 80%;
-    p{
+    p {
       width: 80%;
     }
   }
 
-  .detailsNavigation{
+  .detailsNavigation {
     width: 80%;
   }
-  .specificationsContainer{
-    
+  .specificationsContainer {
     display: flex;
     width: 80%;
     gap: 2.5rem;
 
-    .specification1, .specification2{
+    .specification1,
+    .specification2 {
       width: 45%;
     }
 
-    .specification1{
+    .specification1 {
       ul li {
-        div h3, p{
+        div h3,
+        p {
           font-size: 1.7rem;
         }
       }
     }
-    .specification2{
+    .specification2 {
       ul li {
-        p{
+        p {
           font-size: 1.7rem;
         }
       }
     }
   }
 
-  .hr{
+  .hr {
     width: 80%;
   }
 
-  .merchantContainer{
+  .merchantContainer {
     width: 80%;
-    h1{
+    h1 {
       font-size: 2rem;
     }
 
-    .container{
+    .container {
       flex-direction: row;
 
-      .logoSection{
-        .logoContainer{
+      .logoSection {
+        .logoContainer {
           width: 8rem;
           height: 8rem;
         }
 
-        .merchantInfo{
-          h2{
+        .merchantInfo {
+          h2 {
             font-size: 1.6rem;
           }
-          h3{
+          h3 {
             font-size: 1.4rem;
           }
 
-          .merchantRating{
+          .merchantRating {
             div {
               padding: 0.2rem 0.6rem;
-              p{
+              p {
                 font-size: 1.1rem;
                 width: max-content;
               }
-
             }
           }
         }
       }
 
-      .merchantButtons{
+      .merchantButtons {
         flex-direction: column;
         align-items: stretch;
         justify-content: center;
         gap: 2rem;
 
-        .chatMerchant{
+        .chatMerchant {
           justify-content: center;
         }
       }
     }
   }
 
-  .reviewsContainer{
+  .reviewsContainer {
     width: 80%;
     flex-direction: row;
     justify-content: space-between;
 
-    
-    .filterSection{
+    .filterSection {
       width: 25%;
     }
-    .reviewsSection{
+    .reviewsSection {
       width: 70%;
-      h1{
+      h1 {
         font-size: 2rem;
       }
 
-      .reviewsWrapper{
-        .singleReview{
-          .reviewText{
+      .reviewsWrapper {
+        .singleReview {
+          .reviewText {
             font-size: 1.8rem;
           }
 
-          .reviewDate{
+          .reviewDate {
             font-size: 1.6rem;
           }
 
-          .reviewUser{
-            .userPhoto{
+          .reviewUser {
+            .userPhoto {
               width: 3.5rem;
               height: 3.5rem;
             }
 
-            .userName{
+            .userName {
               font-size: 1.6rem;
             }
           }
@@ -953,172 +937,151 @@
   }
 }
 
-
-.containerProduct{
+.containerProduct {
   width: 80%;
   margin: 10rem auto;
 
-  .heading{
-      color: var(--black-01, #0B0F0E);
-      text-align: left;
+  .heading {
+    color: var(--black-01, #0b0f0e);
+    text-align: left;
 
-      /* Heading/H2 - 18 Semi Bold -  Lh 140% */
-      font-family: 'Clash Grotesk';
-      font-size: 1.8rem;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 140%; /* 25.2px */
-      letter-spacing: -0.2px;
-      margin-bottom: 2rem;
+    /* Heading/H2 - 18 Semi Bold -  Lh 140% */
+    font-family: 'Clahs Grotesk';
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%; /* 25.2px */
+    letter-spacing: -0.2px;
+    margin-bottom: 2rem;
   }
 
-  .description{
-      color: var(--grey-01, #818B9C);
-      
-      /* Paragraph / P2 / 14 Regular - Lh 160% */
-      font-family: 'Clash Grotesk';
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 160%; /* 22.4px */
-      width:70%;
-      margin: 1.5rem auto;
-      text-align: center;
+  .description {
+    color: var(--grey-01, #818b9c);
+
+    /* Paragraph / P2 / 14 Regular - Lh 160% */
+    font-family: 'Clahs Grotesk';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 22.4px */
+    width: 70%;
+    margin: 1.5rem auto;
+    text-align: center;
   }
 
+  .products {
+    display: flex;
+    align-items: start;
+    // justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 4%;
+  }
 
-  .products{
+  .btnContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem auto;
+    .loadMoreBtn {
+      padding: 1.5rem 3.2rem;
+      cursor: pointer;
+      font-size: 1.4rem;
+    }
+  }
+}
+
+@media screen and (max-width: 602px) {
+  .containerProduct {
+    width: 90%;
+
+    .products {
       display: flex;
-      align-items: start;
-      // justify-content: space-between;
+      justify-content: space-between;
       flex-wrap: wrap;
-      gap: 4%;
-      
-      
-   
-      
-  }
-  
- 
-
-  .btnContainer{
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items:center;
-      margin: 3rem auto;
-      .loadMoreBtn{
-          padding: 1.5rem 3.2rem;
-          cursor: pointer;
-          font-size: 1.4rem;
-          
-      }
+    }
   }
 }
 
-@media screen and (max-width:602px) {
-  .containerProduct{
-      width: 90%;
-
-      .products{
-          display: flex;
-          justify-content: space-between;
-          flex-wrap: wrap;
-
-      }
-
-   
-  }
-}
-
-
-
-
-@media screen and (min-width:800px) {
+@media screen and (min-width: 800px) {
   .header {
-    .imagesContainer{
+    .imagesContainer {
       width: 40%;
       gap: 2rem;
       justify-content: space-between;
-      .thumbnail{
+      .thumbnail {
         height: 55rem;
       }
-      .otherImages{
+      .otherImages {
         gap: 10%;
-        div{
+        div {
           width: 25%;
-          height: 7rem;
+          height: 9rem;
         }
       }
     }
 
-    .productDetails{
-      h1{
+    .productDetails {
+      h1 {
         font-size: 3.4rem;
       }
 
-      .rating{
-       .star{
-        p{
+      .rating {
+        .star {
+          p {
+            font-size: 1.6rem;
+            display: flex;
+            align-items: center;
+          }
+        }
+
+        p {
           font-size: 1.6rem;
           display: flex;
           align-items: center;
         }
-       }
-       
-        p{
-          font-size: 1.6rem;
-          display: flex;
-          align-items: center;
-        
-       }
       }
 
-      .soldQuantity{
+      .soldQuantity {
         font-size: 1.6rem;
       }
 
-      .price{
+      .price {
         font-size: 2.5rem;
       }
 
-      .shortDescription{
+      .shortDescription {
         font-size: 1.6rem;
       }
 
-      .variants{
-        div label{
+      .variants {
+        div label {
           font-size: 1.6rem;
         }
       }
 
-      .buttons{
-        .btn{
+      .buttons {
+        .btn {
           padding: 1rem 5rem;
         }
       }
     }
   }
 
-  .merchantContainer{
-    .container{
-
-      .merchantButtons{
+  .merchantContainer {
+    .container {
+      .merchantButtons {
         flex-direction: row;
         justify-content: center;
+        align-items: center;
         gap: 2rem;
-
-        
       }
     }
   }
-
-
 }
 
-
-@media screen and (max-width:560px){
-  aside{
+@media screen and (max-width: 560px) {
+  aside {
     width: 100%;
     translate: 100%;
     transition: 0.4s ease;
@@ -1128,13 +1091,20 @@
     top: 0;
     right: 0;
     opacity: 100;
-    background-color:white;
-    .modalClose{
+    background-color: white;
+    .modalClose {
       display: flex;
       justify-content: space-between;
-      span{
+      span {
         display: block;
       }
     }
-  }  
+  }
+
+  .buttons{
+    div{
+      display: flex;
+      flex-direction: column;
+    }
+  }
 }

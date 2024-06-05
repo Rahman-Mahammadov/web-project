@@ -39,7 +39,6 @@ export function MyVerticallyCenteredModal(props) {
         );
         if (res) {
           toast.success("Signed up Successfully");
-          console.log(res);
           setUser(initialUser);
           setTimeout(() => {
             location.reload();

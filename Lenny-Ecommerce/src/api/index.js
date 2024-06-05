@@ -7,7 +7,7 @@ export const instance = axios.create({
 export const instance2 = axios.create({
     baseURL: "http://localhost:1337/api",
     headers: {
-        Authorization: "bearer " + import.meta.env.VITE_API_TOKEN,
+        Authorization: "Bearer " + import.meta.env.VITE_API_TOKEN,
         "Content-Type": "application/json",
     },
     

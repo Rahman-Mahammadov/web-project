@@ -1,0 +1,25 @@
+.products{
+    width: 100%;
+    padding:0 10% 0 10%;
+    margin: 5rem auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 0;
+    flex-wrap: wrap;
+}
+
+.wishlist{
+    text-align: center;
+    margin: 15rem auto;
+}
+
+@media only screen and (max-width: 620px) {
+    .products{
+        padding: 0 5% 0 5%;
+    }
+
+
+    .wishlist{
+        margin: 3rem auto;
+    }
+}

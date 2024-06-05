@@ -9,14 +9,23 @@ body {
   overflow-x: hidden;
 }
 
+.userMenu{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 nav {
   height: 3.8rem;
-  width: 80%;
+  background: white;
+  bottom: 3rem;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 20px auto;
-
+  padding: 3rem 10%;
+  position: sticky;
+  top: 0;
+  z-index: 1;
   .contentMobile {
     display: none;
   }
@@ -32,6 +41,11 @@ nav {
   border-radius: 3px;
   justify-content: start;
 
+ form{
+  width: 100%;
+  &:focus{
+    background-color: #1e4c2f;
+  }
   input {
     display: block;
     padding-left: 55px;
@@ -39,12 +53,15 @@ nav {
     outline: none;
     background-color: #f6f8fa;
     height: 100%;
-    width: 80%;
+    width: 100%;
     font-size: 1.4rem;
-    &::placeholder{
+    &::placeholder {
       font-size: 1.4rem;
     }
+
+   
   }
+ }
 }
 .dropdown {
   position: relative;
@@ -103,9 +120,7 @@ nav {
 .categorieContainer {
   display: flex;
   width: 100px;
-  justify-content: center;
   gap: 3px;
-  padding-top: 3px;
   background-color: #f6f8fa;
   span {
     display: flex;
@@ -137,14 +152,26 @@ nav {
   margin-left: 30px;
 
   .cartContainer {
-    width: 45px;
-    height: 45px;
+    width: 65px;
+    height: 47px;
     padding-left: 10px;
     cursor: pointer;
+    position: relative;
 
     img {
       height: 100%;
       width: 100%;
+    }
+
+    span{
+      position: absolute;
+      background-color: #E04124;
+      color: #fff;
+      font-size: 13px;
+      padding: 2px 8px;
+      border-radius: 50%;
+      right: 5%;
+      font-family: 'Clash Grotesk';
     }
   }
 
@@ -183,21 +210,20 @@ nav {
         text-decoration: none;
         color: var(--grey-01, #818b9c);
         font-feature-settings: "clig" off, "liga" off;
-        font-family: Clash Grotesk;
+        font-family: 'Clash Grotesk';
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
         line-height: 160%; /* 25.6px */
         margin-top: 1.2rem;
-        &:hover{
+        &:hover {
           transform: scale(1.1);
-        color: var(--grey-01, #142644);
-      
+          color: var(--grey-01, #142644);
         }
       }
     }
     &:hover {
-      .userProfile{
+      .userProfile {
         visibility: visible;
       }
     }
@@ -249,15 +275,16 @@ nav {
 
 // Small-screen
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 660px) {
   body {
     overflow-x: hidden;
   }
   nav {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
+    padding: 3.5rem 5%;
     justify-content: flex-start;
-    
+
     .dropdown {
       display: none;
     }
@@ -282,6 +309,12 @@ nav {
         display: block;
         height: 25px;
         width: 50px;
+        span{
+          font-size: 7px;
+      padding: 1px 3px;
+      border-radius: 50%;
+      right:15%;
+        }
       }
 
       .hamburgerContainer {

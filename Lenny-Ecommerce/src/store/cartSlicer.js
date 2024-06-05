@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-  value: [],
+  value: '',
 }
 
 export const cartSlicer = createSlice({
@@ -9,17 +9,14 @@ export const cartSlicer = createSlice({
   initialState,
   reducers: {
     
-    addToCart: (state, action) => {
-        state.value.push(action.payload)
-    },
 
-    removeFromCart: (state, action) =>{
-        state.value = action.payload
+    basketSize: (state, action)=>{
+      state.value = action.payload
     }
   },
 })
 
 // Action creators are generated for each case reducer function
-export const {addToCart, removeFromCart} = cartSlicer.actions
+export const {addToCart, removeFromCart, basketSize} = cartSlicer.actions
 
 export default cartSlicer.reducer

@@ -1,44 +1,51 @@
 import React from "react";
 import { ButtonPrimary } from "../Button/ButtonPrimary";
-import {ButtonSecondary} from "../Button/ButtonSecondary"
+import { ButtonSecondary } from "../Button/ButtonSecondary";
+import styles from "../Header/styles.module.scss";
+import { motion } from "framer-motion";
 
-import { Product } from "../Product";
-import styles from "../Header/styles.module.scss"
+export const Header = () => {
+  return (
+    <>
+      <header>
+        <div className={styles.container}>
+          <section className={styles.buyNow}>
+            <motion.h1
+              initial={{ x: "-100vw" }}
+              animate={{ x: 0 }}
+              transition={{ duration: 2, delay:0.2}}
+            >
+              Upgrade Your Wardrobe <br />
+              With Our Collection
+            </motion.h1>
 
+            <motion.p
+              initial={{ x: "-100vw" }}
+              animate={{ x: 0 }}
+              transition={{ duration: 2, delay:0.2 }}
+              className={styles.description}
+            >
+              Eget neque aenean viverra aliquam tortor diam nunc. Dis
+              pellentesque lectus quis velit fusce aenean nunc dui consectetur.
+              Eu lorem est ullamcorper nisl amet non mollis.
+            </motion.p>
 
-export const Header = ()=>{
+            <motion.div
+              initial={{ x: "-100vw" }}
+              animate={{ x: 0 }}
+              transition={{ duration: 2, delay:0.2 }}
+              className={styles.buttons}
+            >
+              <ButtonPrimary sinif={styles.btnMain} text="Buy now" />
+              <ButtonSecondary sinif={styles.btnSecond} text="View detail" />
+            </motion.div>
+          </section>
 
-
-    return (
-        <>
-            <header>
-               <div className={styles.container}>
-               <section className={styles.buyNow}>
-                    <h1>Upgrade Your Wardrobe <br />
-With Our Collection</h1>
-
-                    <p className={styles.description}>
-                    Eget neque aenean viverra aliquam tortor diam nunc. Dis pellentesque lectus quis velit fusce aenean nunc dui consectetur. Eu lorem est ullamcorper nisl amet non mollis.
-                    </p>
-
-                    <div className={styles.buttons}>
-                       <ButtonPrimary sinif={styles.btnMain} text='Buy now'/>
-                        <ButtonSecondary sinif={styles.btnSecond} text="View detail" />
-                       
-                        
-                    </div>
-                </section>
-
-                <section className={styles.productContainer}>
-                    <div className={styles.productImg}>
-                        <img src="/src/assets/images/image 4.png" />
-
-                    </div>
-                    
-                </section>
-               </div>
-            </header>
-        
-        </>
-    )
-}
+          <section className={styles.productContainer}>
+            <div className={styles.productImg}></div>
+          </section>
+        </div>
+      </header>
+    </>
+  );
+};

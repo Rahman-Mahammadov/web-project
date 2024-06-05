@@ -25,7 +25,7 @@ export function MyVerticallyCenteredModal(props) {
     try {
       if (user.identifier && user.password) {
         const res = await instance2.post("/auth/local", JSON.stringify(user));
-        console.log(res);
+     
         if (res.data.jwt) {
           setUser(res.data);
           toast.success("Logged in successfully", {

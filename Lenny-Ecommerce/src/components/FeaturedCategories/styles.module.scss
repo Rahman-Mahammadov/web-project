@@ -1,116 +1,123 @@
+.container {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 8rem;
 
-.container{
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 8rem;
+  .heading {
+    color: var(--black-01, #0b0f0e);
+    font-family: "Clash Grotesk";
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%; /* 25.2px */
+    letter-spacing: -0.02rem;
+    margin-bottom: 1.7rem;
+  }
 
-    .heading{
-        color: var(--black-01, #0B0F0E);
-        font-family: 'Clash Grotesk';
-        font-size: 1.8rem;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 140%; /* 25.2px */
-        letter-spacing: -0.02rem;  
-        margin-bottom: 1.7rem;      
+  .categories {
+    display: flex;
+    gap: 3rem;
+    overflow-x: scroll;
+    justify-content: space-between;
+    cursor: pointer;
+
+    &::-webkit-scrollbar-track {
+       background-color: white;
     }
 
-    .categories{
+    &::-webkit-scrollbar {
+      height: 3px;
+      
+    }
+    &::-webkit-scrollbar-thumb {
+      background: black; /* Set the color of the scrollbar handle */
+      
+      border-radius: 5px; /* Set the border radius of the handle */
+    }
+
+    .catContainer {
+      border-radius: 1.2rem;
+      border: 1.5px solid var(--d-grey-01, #e4e9ee);
+      padding: 1.5rem;
+      .singleCategory {
+        background-color: #fff;
         display: flex;
-        gap: 3rem;
-        overflow-x: scroll;
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
 
-        &::-webkit-scrollbar-track {
-            margin-top: 2rem;
-            background: #1E4C2F;        /* color of the tracking area */
+        width: 7rem;
+
+        .catImg {
+          width: 3.2rem;
+          height: 3.2rem;
+          margin-bottom: 0.9rem;
+          img {
+            width: 100%;
+            height: 100%;
           }
-        
-        .catContainer{
-
-            border-radius: 1.2rem;
-            border: 1.5px solid var(--d-grey-01, #E4E9EE);
-            padding: 1.5rem;
-            .singleCategory{
-
-                background-color: #fff;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                
-                width: 7rem;
-                
-                .catImg{
-                    width: 3.2rem;
-                    height: 3.2rem;
-                    margin-bottom: 0.9rem;
-                    img{
-                        width: 100%;
-                        height: 100%;
-                    }
-                }
-    
-                .categoryName{
-                    color: var(--black-01, #0B0F0E);
-                    text-align: center;
-                    font-family: 'Clash Grotesk';
-                    font-size: 1.4rem;
-                    font-style: normal;
-                    font-weight: 600;
-                    line-height: 140%; /* 19.6px */
-                    letter-spacing: -0.02rem;
-                    margin-bottom: 0.6rem;
-                }
-    
-                .amountProducts{
-                    color: var(--grey-01, #818B9C);
-                    text-align: center;
-    
-                    
-                    font-family: 'Clash Grotesk';
-                    font-size: 1.2rem;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 120%; /* 19.2px */
-                }
-    
-    
-            }
         }
+
+        .categoryName {
+          color: var(--black-01, #0b0f0e);
+          text-align: center;
+          font-family: "Clash Grotesk";
+          font-size: 1.4rem;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 140%; /* 19.6px */
+          letter-spacing: -0.02rem;
+          margin-bottom: 0.6rem;
+        }
+
+        .amountProducts {
+          color: var(--grey-01, #818b9c);
+          text-align: center;
+
+          font-family: "Clash Grotesk";
+          font-size: 1.2rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 120%; /* 19.2px */
+        }
+      }
+
+      &:hover{
+        box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.05);
+        
+      }
     }
+  }
 }
 
+@media screen and (min-width: 750px) {
+  .container {
+    width: 80%;
 
-@media screen and (min-width:750px) {
-    
-    .container{
-        width: 80%;
-
-        .heading{
-            font-size: 2.7rem;
-        }
-        .categories{
-        
-
-           .catContainer{
-            padding: 2.3rem;
-            .singleCategory{
-                width: 9rem;
-
-                .catImg{
-                    width: 4.3rem;
-                    height: 4.3rem;
-                }
-
-                .categoryName{
-                    font-size: 1.8rem;
-                }
-
-                .amountProducts{
-                    font-size: 1.65rem;
-                }
-            }
-           }
-        }
+    .heading {
+      font-size: 2.7rem;
     }
+    .categories {
+      overflow: hidden;
+
+      .catContainer {
+        padding: 2.3rem;
+        .singleCategory {
+          width: 9rem;
+
+          .catImg {
+            width: 4.3rem;
+            height: 4.3rem;
+          }
+
+          .categoryName {
+            font-size: 1.8rem;
+          }
+
+          .amountProducts {
+            font-size: 1.65rem;
+          }
+        }
+      }
+    }
+  }
 }
