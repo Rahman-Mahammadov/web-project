@@ -13,7 +13,6 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.7",
-    "actually-accessible-react-success-animation": "^1.0.0",
     "axios": "^1.6.0",
     "bootstrap": "^5.3.2",
     "framer-motion": "^11.0.18",
