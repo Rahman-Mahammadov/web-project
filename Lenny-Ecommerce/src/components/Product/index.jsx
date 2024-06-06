@@ -111,7 +111,7 @@ export const Product = ({
           <p className={styles.brand}>{marka}</p>
           <div className={styles.star}>
             <div className={styles.ratingSection}>
-              <img src="/public/images/star.png" alt="" />
+              <img src="/public/assets/images/star.png" alt="" />
               <p className={styles.rating}>{rating}</p>
             </div>
 

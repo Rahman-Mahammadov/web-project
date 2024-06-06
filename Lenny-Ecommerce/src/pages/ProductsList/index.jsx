@@ -159,7 +159,7 @@ export const ProductsList = () => {
               </select>
             </form>
             <div className={styles.filterIcon} onClick={handleModal}>
-              <img src="/public/images/Search Box.png" />
+              <img src="/public/assets/images/Search Box.png" />
             </div>
           </div>
         </div>
