@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styles from "./styles.module.scss";
 import { changeCategory } from "../../store/categorySlicer";
 import { Link } from "react-router-dom";
@@ -98,7 +98,7 @@ export const Navbar = () => {
       <nav>
         <Link to="/">
           <div className={styles.logoContainer}>
-            <img src="/src/assets/images/Logo.svg" />
+            <img src="/public/images/Logo.svg" />
           </div>
         </Link>
 
@@ -175,13 +175,13 @@ export const Navbar = () => {
               navigate("/basket");
             }}
           >
-            <img src="/src/assets/images/cart.svg" alt="" />
+            <img src="/public/images/cart.svg" alt="" />
             <span>{basketSize}</span>
           </div>
           <div className={styles.line}></div>
 
           <div className={styles.profileContainer}>
-            <img src="/src/assets/images/profile.svg" alt="" />
+            <img src="/public/images/profile.svg" alt="" />
             <div className={styles.userProfile}>
               {/* <Link
                 onClick={() => setModalSignIn(true)}
@@ -268,7 +268,7 @@ export const Navbar = () => {
             }}
             className={styles.hamburgerContainer}
           >
-            <img src="/src/assets/images/Hamburger_icon.svg.png" alt="" />
+            <img src="/public/images/Hamburger_icon.svg.png" alt="" />
           </div>
         </div>
       </nav>

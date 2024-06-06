@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "../Footer/styles.module.scss";
 
 export const Footer = () => {
@@ -7,7 +6,7 @@ export const Footer = () => {
       <footer>
         <div className={styles.logoSection}>
           <div className={styles.logoContainer}>
-            <img src="/src/assets/images/Logo.svg" alt="" />
+            <img src="/public/images/Logo.svg" alt="" />
           </div>
           <p>
             The biggest marketplace managed by Ideologist corp, which provides

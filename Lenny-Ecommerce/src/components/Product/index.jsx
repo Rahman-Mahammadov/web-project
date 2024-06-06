@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "../Product/styles.module.scss";
 import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 import { FaHeart } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa";
 import { userData } from "../../components/Auth/auth";
@@ -18,7 +17,7 @@ export const Product = ({
   id,
 }) => {
   const userId = userData()?.userId;
-  localStorage.setItem('userID', userId)
+  localStorage.setItem("userID", userId);
 
   const [wishlist, setWishlist] = useState([]);
 
@@ -36,15 +35,11 @@ export const Product = ({
         setWishlist(ids);
       };
       getWishList();
-
-
-
     } else {
       const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
       setWishlist(wishlist);
     }
   }, []);
-
 
   const handleWishList = async (e) => {
     e.preventDefault();
@@ -61,9 +56,8 @@ export const Product = ({
           })
         );
 
-       setWishlist((prev)=> ([...prev, id]))
+        setWishlist((prev) => [...prev, id]);
       } else {
-        
         const {
           data: { data },
         } = await instance.get(
@@ -71,13 +65,10 @@ export const Product = ({
         );
 
         const wishlistId = data[0]?.id;
-        
 
-         await instance2.delete(`/wish-lists/${wishlistId}`);
+        await instance2.delete(`/wish-lists/${wishlistId}`);
 
-        setWishlist((prev)=> 
-          prev.filter((prodId)=> prodId !== id)
-        )
+        setWishlist((prev) => prev.filter((prodId) => prodId !== id));
       }
     } else {
       const storedWishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
@@ -120,7 +111,7 @@ export const Product = ({
           <p className={styles.brand}>{marka}</p>
           <div className={styles.star}>
             <div className={styles.ratingSection}>
-              <img src="/src/assets/images/star.png" alt="" />
+              <img src="/public/images/star.png" alt="" />
               <p className={styles.rating}>{rating}</p>
             </div>
 

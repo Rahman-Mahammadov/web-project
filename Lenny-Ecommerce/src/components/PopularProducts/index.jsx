@@ -37,7 +37,6 @@ export const PopularProducts = ()=>{
 
                 <section className={styles.products}>
                
-                {/* <Product img={'src/assets/images/s 1.png'} heading={'Green Man Jacket'} price={'49'} marka={'North Purwokerto'} rating={'2.4'} sales={'37'}/> */}
                 {homeProducts1.map((product)=>{
                     let result
 
