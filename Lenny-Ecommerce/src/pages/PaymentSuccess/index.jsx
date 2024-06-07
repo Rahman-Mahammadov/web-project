@@ -9,7 +9,7 @@ export const PaymentSuccess = () => {
     <>
       <div className={styles.container}>
         <div className={styles.logoContainer}>
-          <img src="/public/assets/images/success.jpg" alt="" />
+          <img src="/assets/images/success.jpg" alt="" />
         </div>
         <h2 className={styles.heading}>Your payment is successful</h2>
         <p className={styles.paymentInfo}>

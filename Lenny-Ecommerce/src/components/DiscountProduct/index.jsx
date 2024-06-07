@@ -17,7 +17,7 @@ export const DiscountProduct = () => {
       <div className={styles.container}>
         <motion.div initial={{x:"-100%"}} whileInView={{x:"0vw"}} transition={{delay:0.1, duration:1.7}} className={styles.firstPhoto}>
           <img
-            src="public\assets\images\tech-device-with-nature-background.jpg"
+            src="\assets\images\tech-device-with-nature-background.jpg"
             alt=""
             className={styles.img}
           />

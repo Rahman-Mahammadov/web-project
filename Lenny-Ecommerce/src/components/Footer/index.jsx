@@ -6,7 +6,7 @@ export const Footer = () => {
       <footer>
         <div className={styles.logoSection}>
           <div className={styles.logoContainer}>
-            <img src="/public/assets/images/Logo.svg" alt="" />
+            <img src="/assets/images/Logo.svg" alt="" />
           </div>
           <p>
             The biggest marketplace managed by Ideologist corp, which provides

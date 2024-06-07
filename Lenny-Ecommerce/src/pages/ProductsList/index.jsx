@@ -66,9 +66,9 @@ export const ProductsList = () => {
           const {
             data: { data },
           } = await instance.get(
-            `products?filters[name][$contains]=${inputUrl}&populate=*`
+            `products?filters[name][$containsi]=${inputUrl}&populate=*`
           );
-          setUrl(`products?filters[name][$contains]=${inputUrl}&populate=*`);
+          setUrl(`products?filters[name][$containsi]=${inputUrl}&populate=*`);
           setProducts(data);
         }
       }
@@ -85,7 +85,7 @@ export const ProductsList = () => {
       setProducts(data);
     }
     changeUrl();
-  }, [url]);
+  }, [url,input]);
 
   const handleChange = (e, filterOption) => {
     const { checked } = e?.target;
@@ -159,7 +159,7 @@ export const ProductsList = () => {
               </select>
             </form>
             <div className={styles.filterIcon} onClick={handleModal}>
-              <img src="/public/assets/images/Search Box.png" />
+              <img src="/assets/images/Search Box.png" />
             </div>
           </div>
         </div>

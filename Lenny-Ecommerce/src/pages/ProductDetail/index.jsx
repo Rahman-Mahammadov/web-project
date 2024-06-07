@@ -171,7 +171,7 @@ export const ProductDetail = () => {
 
           <div className={styles.rating}>
             <div className={styles.star}>
-              <img src="/public/assets/images/star.png" alt="" />
+              <img src="/assets/images/star.png" alt="" />
               <p>{singleProduct.attributes?.rating}</p>
             </div>
 
@@ -286,7 +286,7 @@ export const ProductDetail = () => {
                 <li key={index}>
                   <div>
                     <div className={styles.icon}>
-                      <img src="/public/assets/images/tick-circle.jpg" alt="" />
+                      <img src="/assets/images/tick-circle.jpg" alt="" />
                     </div>
                     <p>{details.children[0].text}</p>
                   </div>
@@ -324,13 +324,13 @@ export const ProductDetail = () => {
           <div className={styles.merchantButtons}>
             <div className={styles.chatMerchant}>
               <div className={styles.chatlogo}>
-                <img src="/public/assets/images/message.png" alt="" />
+                <img src="/assets/images/message.png" alt="" />
               </div>
               <p>Chat</p>
             </div>
             <div className={styles.visitMerchant}>
               <div className={styles.visitlogo}>
-                <img src="/public/assets/images/shop.png" alt="" />
+                <img src="/assets/images/shop.png" alt="" />
               </div>
               <p>Visit Merchant</p>
             </div>
@@ -367,31 +367,31 @@ export const ProductDetail = () => {
                 <li>
                   <input  type="checkbox" />
                   <label htmlFor="">
-                    <img src="/public/assets/images/star.png" alt="" /> 5
+                    <img src="/assets/images/star.png" alt="" /> 5
                   </label>
                 </li>
                 <li>
                   <input type="checkbox" />
                   <label htmlFor="">
-                    <img src="/public/assets/images/star.png" alt="" /> 4
+                    <img src="/assets/images/star.png" alt="" /> 4
                   </label>
                 </li>
                 <li>
                   <input type="checkbox" />
                   <label htmlFor="">
-                    <img src="/public/assets/images/star.png" alt="" /> 3
+                    <img src="/assets/images/star.png" alt="" /> 3
                   </label>
                 </li>
                 <li>
                   <input type="checkbox" />
                   <label htmlFor="">
-                    <img src="/public/assets/images/star.png" alt="" /> 2
+                    <img src="/assets/images/star.png" alt="" /> 2
                   </label>
                 </li>
                 <li>
                   <input type="checkbox" />
                   <label htmlFor="">
-                    <img src="/public/assets/images/star.png" alt="" /> 1
+                    <img src="/assets/images/star.png" alt="" /> 1
                   </label>
                 </li>
               </ul>
@@ -414,7 +414,7 @@ export const ProductDetail = () => {
                             <>
                               <li>
                                 {" "}
-                                <img src="/public/assets/images/star.png" alt="" />
+                                <img src="/assets/images/star.png" alt="" />
                               </li>
                             </>
                           );
@@ -429,7 +429,7 @@ export const ProductDetail = () => {
 
                     <div className={styles.reviewUser}>
                       <div className={styles.userPhoto}>
-                        <img src="/public/assets/images/account_circle_FILL0_wght400_GRAD0_opsz24.png" />
+                        <img src="/assets/images/account_circle_FILL0_wght400_GRAD0_opsz24.png" />
                       </div>
                       <h2 className={styles.userName}>{review.attributes.user.data.attributes.username}</h2>
                     </div>

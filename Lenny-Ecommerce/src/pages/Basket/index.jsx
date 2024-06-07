@@ -364,7 +364,7 @@ export const Basket = () => {
                   className={styles.promoCode}
                 >
                   <div className={styles.promoImg}>
-                    <img src="/public/assets/images/discount-shape.png" alt="" />
+                    <img src="/assets/images/discount-shape.png" alt="" />
                   </div>
                   <div className={styles.promoText}>
                     <h1>Use Promo</h1>
@@ -372,7 +372,7 @@ export const Basket = () => {
                   </div>
 
                   <div className={styles.nextIcon}>
-                    <img src="/public/assets/images/arrow-right.png" />
+                    <img src="/assets/images/arrow-right.png" />
                   </div>
                 </motion.div>
               )}
