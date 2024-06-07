@@ -24,7 +24,7 @@ export const ProductsList = () => {
     setOpen((prev) => ({ ...prev, [name]: !prev[name] }));
   };
   const [products, setProducts] = React.useState([]);
-  const [url, setUrl] = React.useState();
+  const [url, setUrl] = React.useState("");
   const cat = useSelector((state) => state.category.value);
   const input = useSelector((state) => state.input.value);
   const { categoryUrl, inputUrl } = useParams();

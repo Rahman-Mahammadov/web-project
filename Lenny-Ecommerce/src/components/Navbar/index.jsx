@@ -72,9 +72,8 @@ export const Navbar = () => {
   
       if (data) {
         const arr = data.filter(
-          (prod) => prod.attributes.user.data.id == userData().userId
+          (prod) => prod.attributes?.user?.data?.id == userData().userId
         );
-        console.log(arr)
        const totalQuantity = arr.reduce((acc, item)=>{
           return acc+=item.attributes.qty;
   
@@ -92,7 +91,6 @@ export const Navbar = () => {
   },[basketSelector])
 
 
-  console.log(basketSize)
   return (
     <>
       <nav>
