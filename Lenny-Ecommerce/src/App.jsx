@@ -1,21 +1,29 @@
-import React from "react";
-import { Navbar, Footer } from "./components";
-import { HomePage, ProductDetail, ProductsList } from "./pages";
-import { PaymentSuccess } from "./pages/PaymentSuccess";
-import { Basket } from "./pages/Basket";
-import { BrowserRouter, Routes, Route, RouterProvider } from "react-router-dom";
+import {
+  Navbar,
+  Footer,
+  ScrollToTop,
+  Basket,
+  ProductReview,
+} from "./components";
+import {
+  HomePage,
+  ProductDetail,
+  ProductsList,
+  WishList,
+  PaymentSuccess,
+} from "./pages";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "./store";
 import { ToastContainer } from "react-toastify";
 import { Orders } from "./pages/UserOrder";
-import { WishList } from "./pages/WishList";
-import { ProductReview } from "./components/ProductReview";
 
 export const App = () => {
   return (
     <>
       <Provider store={store}>
         <BrowserRouter>
+          <ScrollToTop />
           <Navbar />
           <Routes>
             <Route path="/" element={<HomePage />} />
