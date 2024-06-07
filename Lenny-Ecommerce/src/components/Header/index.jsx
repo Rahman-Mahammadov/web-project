@@ -16,7 +16,7 @@ export const Header = () => {
               transition={{ duration: 2, delay:0.2}}
             >
               Upgrade Your Wardrobe <br />
-              With Our Collection
+              With Our Collections
             </motion.h1>
 
             <motion.p
