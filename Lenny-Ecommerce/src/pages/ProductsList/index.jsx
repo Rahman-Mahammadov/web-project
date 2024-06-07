@@ -79,13 +79,15 @@ export const ProductsList = () => {
 
   React.useEffect(() => {
     async function changeUrl() {
-      const {
-        data: { data },
-      } = await instance.get(url);
-      setProducts(data);
+      if (url) {
+        const {
+          data: { data },
+        } = await instance.get(url);
+        setProducts(data);
+      }
     }
     changeUrl();
-  }, [url,input]);
+  }, [url, input]);
 
   const handleChange = (e, filterOption) => {
     const { checked } = e?.target;
