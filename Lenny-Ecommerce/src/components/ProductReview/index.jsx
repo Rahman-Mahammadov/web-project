@@ -6,11 +6,11 @@ import { userData } from "../../components/Auth/auth";
 import { instance, instance2 } from "../../api";
 import { toast } from "react-toastify";
 
-export const ProductReview = ({ id, setReviews, reviews }) => {
+export const ProductReview = ({ id, setReviews, reviews, onRender }) => {
   const [rating, setRating] = useState(null);
   const [hover, setHover] = useState(null);
   const userId = userData()?.userId;
-  const [desc, setDesc] = useState(null);
+  const [desc, setDesc] = useState("");
   const [reviewUsersId, setReviewUsersId] = useState([]);
   const [clicked, setClicked] = useState(false);
 
@@ -18,15 +18,15 @@ export const ProductReview = ({ id, setReviews, reviews }) => {
     const getProdReviews = async () => {
       const {
         data: { data },
-      } = await instance.get(
-        `/reviews?filters[products]=${id}&populate=*`
-      );
+      } = await instance.get(`/reviews?filters[products]=${id}&populate=*`);
 
-      setReviews(data)
       data.map((comment) => {
         setReviewUsersId((prev) => [...prev, comment.attributes.user.data.id]);
       });
+
+      setReviews(data);
     };
+
     getProdReviews();
   }, [clicked]);
 
@@ -48,6 +48,7 @@ export const ProductReview = ({ id, setReviews, reviews }) => {
           );
         };
         postReviews();
+        onRender();
       } else {
         toast.error("You cannot review a product more than once!");
       }
@@ -59,7 +60,6 @@ export const ProductReview = ({ id, setReviews, reviews }) => {
     }
   };
 
-  
   return (
     <>
       <div className={styles.rating}>
@@ -67,7 +67,7 @@ export const ProductReview = ({ id, setReviews, reviews }) => {
         {[...Array(5)].map((star, index) => {
           const currentRating = index + 1;
           return (
-            <label key={Math.random()*10}>
+            <label key={Math.random() * 10}>
               <input
                 type="radio"
                 name="rating"

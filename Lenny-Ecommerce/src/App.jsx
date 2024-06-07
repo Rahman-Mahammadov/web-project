@@ -11,13 +11,7 @@ import { Orders } from "./pages/UserOrder";
 import { WishList } from "./pages/WishList";
 import { ProductReview } from "./components/ProductReview";
 
-
-
 export const App = () => {
-  
-  
-
-
   return (
     <>
       <Provider store={store}>
@@ -40,7 +34,6 @@ export const App = () => {
             <Route path="/orders/" element={<Orders />} />
             <Route path="/wishlist/" element={<WishList />} />
             <Route path="/review/" element={<ProductReview />} />
-
           </Routes>
 
           <Footer />

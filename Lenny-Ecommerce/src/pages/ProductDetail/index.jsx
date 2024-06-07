@@ -22,9 +22,10 @@ export const ProductDetail = () => {
   const [open, setOpen] = useState(false);
   const [basket, setBasket] = useState([]);
   const [reviews, setReviews] = useState([]);
+  const [childRendered, setChildRendered] = useState(false);
 
   const dispatch = useDispatch();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const { id } = useParams();
   const handleModal = () => {
     setModal(!modal);
@@ -32,13 +33,11 @@ export const ProductDetail = () => {
 
   const cartProduct = useSelector((state) => state.cart.value);
   const handleAccordion = (e) => {
-    
     const {
       dataset: { name },
     } = e.target;
 
     setOpen((prev) => ({ ...prev, [name]: !prev[name] }));
-   
   };
 
   const handleCartClick = async () => {
@@ -46,8 +45,6 @@ export const ProductDetail = () => {
       const {
         data: { data },
       } = await instance2.get("/user-carts?populate=*");
-
-      
 
       const inBasket = data.some((prod) => {
         return (
@@ -72,14 +69,14 @@ export const ProductDetail = () => {
         toast.error("Product is already in the basket");
       }
 
-      dispatch(isBasketRefreshed())
+      dispatch(isBasketRefreshed());
     } else {
       toast.error("You need to log in");
     }
   };
 
   React.useEffect(() => {
-    window.scroll(0,0)
+    window.scroll(0, 0);
     async function getProduct() {
       const {
         data: { data },
@@ -94,24 +91,33 @@ export const ProductDetail = () => {
     const getReviews = async () => {
       const {
         data: { data },
-      } = await instance.get(
-        `/reviews?filters[products]=${id}&populate=*`
-      );
-     
+      } = await instance.get(`/reviews?filters[products]=${id}&populate=*`);
+
       setReviews(data);
     };
 
     getReviews();
-  }, []);
+  }, [childRendered]);
 
-  console.log(singleProduct)
-  
+  console.log(singleProduct);
+
   return (
     <>
       <div className={styles.nav}>
-        <p style={{cursor:"pointer"}} onClick={()=> navigate('/')} >Home</p>
-        
-        <p  style={{cursor:"pointer"}} onClick={()=>{navigate(`/productslist/${singleProduct.attributes?.categories?.data[0].attributes.name}`)}} >{singleProduct.attributes?.categories?.data[0].attributes.name}</p>
+        <p style={{ cursor: "pointer" }} onClick={() => navigate("/")}>
+          Home
+        </p>
+
+        <p
+          style={{ cursor: "pointer" }}
+          onClick={() => {
+            navigate(
+              `/productslist/${singleProduct.attributes?.categories?.data[0].attributes.name}`
+            );
+          }}
+        >
+          {singleProduct.attributes?.categories?.data[0].attributes.name}
+        </p>
         <span className="material-symbols-outlined">chevron_right</span>
         <h4>{singleProduct.attributes?.name}</h4>
       </div>
@@ -130,7 +136,6 @@ export const ProductDetail = () => {
                   src: `${import.meta.env.VITE_API_UPLOAD_IMG}${mainImg}`,
                   width: 900,
                   height: 1200,
-                  
                 },
               }}
             />
@@ -198,7 +203,9 @@ export const ProductDetail = () => {
                     <option value="">--choose an option--</option>
                     {variant.attributes.options.map((options) => {
                       return (
-                        <option key={Math.random()*10} value="">{options.children[0].text}</option>
+                        <option key={Math.random() * 10} value="">
+                          {options.children[0].text}
+                        </option>
                       );
                     })}
                   </select>
@@ -209,7 +216,7 @@ export const ProductDetail = () => {
 
           <div className={styles.buttons}>
             <ButtonPrimary sinif={styles.btn} text={"Buy now"} />
-            <div  onClick={handleCartClick}>
+            <div onClick={handleCartClick}>
               <ButtonSecondary sinif={styles.btn} text={"Add to cart"} />
             </div>
           </div>
@@ -242,7 +249,6 @@ export const ProductDetail = () => {
           >
             Reviews
           </li>
-         
         </ul>
       </div>
 
@@ -280,7 +286,6 @@ export const ProductDetail = () => {
         <div className={styles.specification2}>
           <h1>In the box</h1>
           <ul>
-            
             {singleProduct?.attributes?.inBox?.map((details, index) => {
               return (
                 <li key={index}>
@@ -304,13 +309,18 @@ export const ProductDetail = () => {
           <div className={styles.logoSection}>
             <div className={styles.logoContainer}>
               <img
-                src={`${import.meta.env.VITE_API_UPLOAD_IMG}${singleProduct.attributes?.merchant.data.attributes.logo.data[0].attributes.url}`}
+                src={`${import.meta.env.VITE_API_UPLOAD_IMG}${
+                  singleProduct.attributes?.merchant.data.attributes.logo
+                    .data[0].attributes.url
+                }`}
                 alt=""
               />
             </div>
             <div className={styles.merchantInfo}>
               <h2>{singleProduct.attributes?.merchant.data.attributes.name}</h2>
-              <h3>{singleProduct.attributes?.merchant.data.attributes.location}</h3>
+              <h3>
+                {singleProduct.attributes?.merchant.data.attributes.location}
+              </h3>
               <div className={styles.merchantRating}>
                 <div>
                   <p>Top Rated Merchant</p>
@@ -365,7 +375,7 @@ export const ProductDetail = () => {
 
               <ul className={open.best ? styles.closeFilter : ""}>
                 <li>
-                  <input  type="checkbox" />
+                  <input type="checkbox" />
                   <label htmlFor="">
                     <img src="/assets/images/star.png" alt="" /> 5
                   </label>
@@ -419,19 +429,24 @@ export const ProductDetail = () => {
                             </>
                           );
                         })}
-                       
                       </ul>
                     </div>
                     <h2 className={styles.reviewText}>
                       {review.attributes.description}
                     </h2>
-                    <p className={styles.reviewDate}>{moment(review.attributes.createdAt).format('YYYY-MM-DD HH:mm:ss')}</p>
+                    <p className={styles.reviewDate}>
+                      {moment(review.attributes.createdAt).format(
+                        "YYYY-MM-DD HH:mm:ss"
+                      )}
+                    </p>
 
                     <div className={styles.reviewUser}>
                       <div className={styles.userPhoto}>
                         <img src="/assets/images/account_circle_FILL0_wght400_GRAD0_opsz24.png" />
                       </div>
-                      <h2 className={styles.userName}>{review.attributes.user.data.attributes.username}</h2>
+                      <h2 className={styles.userName}>
+                        {review.attributes.user.data.attributes.username}
+                      </h2>
                     </div>
                     <hr className={`${styles.hr} ${styles.hr1}`} />
                   </div>
@@ -439,13 +454,18 @@ export const ProductDetail = () => {
               );
             })}
           </div>
-          {userId && <ProductReview reviews={reviews} setReviews={setReviews} id={id} />}
+          {userId && (
+            <ProductReview
+              reviews={reviews}
+              setReviews={setReviews}
+              id={id}
+              onRender={() => setChildRendered(!childRendered)}
+            />
+          )}
         </div>
       </div>
 
       <hr className={styles.hr} />
-
-      
     </>
   );
 };
