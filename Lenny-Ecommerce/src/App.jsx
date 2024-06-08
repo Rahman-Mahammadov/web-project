@@ -1,14 +1,9 @@
-import {
-  Navbar,
-  Footer,
-  ScrollToTop,
-  Basket,
-  ProductReview,
-} from "./components";
+import { Navbar, Footer, ScrollToTop, ProductReview } from "./components";
 import {
   HomePage,
   ProductDetail,
   ProductsList,
+  Basket,
   WishList,
   PaymentSuccess,
 } from "./pages";

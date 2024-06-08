@@ -9,7 +9,11 @@ body {
   overflow-x: hidden;
 }
 
-.userMenu{
+.shadow {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.userMenu {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -41,27 +45,28 @@ nav {
   border-radius: 3px;
   justify-content: start;
 
- form{
-  width: 100%;
-  &:focus{
-    background-color: #1e4c2f;
-  }
-  input {
-    display: block;
-    padding-left: 55px;
-    border: none;
-    outline: none;
-    background-color: #f6f8fa;
-    height: 100%;
+  form {
     width: 100%;
-    font-size: 1.4rem;
-    &::placeholder {
-      font-size: 1.4rem;
-    }
 
-   
+    input {
+      display: block;
+      padding-left: 55px;
+      border: none;
+      outline: none;
+      background-color: #f6f8fa;
+      height: 100%;
+      width: 100%;
+      font-size: 1.4rem;
+      &::placeholder {
+        font-size: 1.4rem;
+      }
+
+      &:focus {
+        outline: none !important;
+        background-color: #f6f8fa !important;
+      }
+    }
   }
- }
 }
 .dropdown {
   position: relative;
@@ -163,15 +168,15 @@ nav {
       width: 100%;
     }
 
-    span{
+    span {
       position: absolute;
-      background-color: #E04124;
+      background-color: #e04124;
       color: #fff;
       font-size: 13px;
       padding: 2px 8px;
       border-radius: 50%;
       right: 5%;
-      font-family: 'Clash Grotesk';
+      font-family: "Clash Grotesk";
     }
   }
 
@@ -210,7 +215,7 @@ nav {
         text-decoration: none;
         color: var(--grey-01, #818b9c);
         font-feature-settings: "clig" off, "liga" off;
-        font-family: 'Clash Grotesk';
+        font-family: "Clash Grotesk";
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -309,11 +314,11 @@ nav {
         display: block;
         height: 25px;
         width: 50px;
-        span{
+        span {
           font-size: 7px;
-      padding: 1px 3px;
-      border-radius: 50%;
-      right:15%;
+          padding: 1px 3px;
+          border-radius: 50%;
+          right: 15%;
         }
       }
 

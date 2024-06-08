@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import styles from "./styles.module.scss";
 import { changeCategory } from "../../store/categorySlicer";
-import { Link } from "react-router-dom";
 import { getCategories } from "../../api/products";
 import { useSelector, useDispatch } from "react-redux";
 import { inputSearch } from "../../store/searchInputSlicer";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { MyVerticallyCenteredModal as SignUp } from "../Auth/SignUp.jsx";
 import { MyVerticallyCenteredModal as SignIn } from "../Auth/SignIn.jsx";
@@ -18,15 +17,17 @@ import { IoIosLogOut } from "react-icons/io";
 import { instance } from "../../api/index.js";
 
 export const Navbar = () => {
-  const [clickMenu, setClickedMenu] = React.useState(false);
-  const [categories, setCategories] = React.useState([]);
-  const [input, setInput] = React.useState("");
-  const [modalShow, setModalShow] = React.useState(false);
-  const [modalSignIn, setModalSignIn] = React.useState(false);
-  const [basketSize, setBasketSize] = useState(0);
-  const basketSelector = useSelector((state)=>state.basketSize.value)
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  const [input, setInput] = React.useState("");
+  const [basketSize, setBasketSize] = useState(0);
+  const [scrolled, setScrolled] = useState(false);
+  const [categories, setCategories] = React.useState([]);
+  const [modalShow, setModalShow] = React.useState(false);
+  const [clickMenu, setClickedMenu] = React.useState(false);
+  const [modalSignIn, setModalSignIn] = React.useState(false);
+  const basketSelector = useSelector((state) => state.basketSize.value);
 
   const handleCategoryClick = (e) => {
     dispatch(changeCategory(e.target.innerHTML));
@@ -51,7 +52,6 @@ export const Navbar = () => {
     toast.success("Signed out successfully");
   };
 
-  
   React.useEffect(() => {
     async function getAllCategories() {
       const {
@@ -61,39 +61,49 @@ export const Navbar = () => {
     }
 
     getAllCategories();
-
-   
   }, []);
 
-
-  React.useEffect(()=>{
+  React.useEffect(() => {
     const prods = async () => {
-      const {data:{data}} = await instance.get(`/user-carts?populate=*`);
-  
+      const {
+        data: { data },
+      } = await instance.get(`/user-carts?populate=*`);
+
       if (data) {
         const arr = data.filter(
           (prod) => prod.attributes?.user?.data?.id == userData().userId
         );
-       const totalQuantity = arr.reduce((acc, item)=>{
-          return acc+=item.attributes.qty;
-  
-          
-        }, 0)
-  
-        setBasketSize(totalQuantity)
-        
+        const totalQuantity = arr.reduce((acc, item) => {
+          return (acc += item.attributes.qty);
+        }, 0);
+
+        setBasketSize(totalQuantity);
       }
     };
 
+    prods();
+  }, [basketSelector]);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      if (offset > 0) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
     
-
-    prods()
-  },[basketSelector])
-
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <>
-      <nav>
+      <nav className={scrolled && styles.shadow}>
         <Link to="/">
           <div className={styles.logoContainer}>
             <img src="/assets/images/Logo.svg" />
